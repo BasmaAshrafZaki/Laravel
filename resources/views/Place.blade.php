@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-    
+@include('includes.head')
 	
 	<body>
 		<!--[if lte IE 9]>
@@ -83,12 +83,12 @@
 				</div><!--/.section-header-->
 				<div class="explore-content">
 					<div class="row">
-					@foreach($places as $place) 	
+					@foreach($Places as $Place) 	
 					<div class=" col-md-4 col-sm-6">
 							<div class="single-explore-item">
 								
 								<div class="single-explore-img">
-									<img src="{{ asset('assets/images/'.$place->image) }}" alt="explore image">
+									<img src="{{ asset('assets/Images/'.$Place->Image) }}" alt="explore image">
 									<div class="single-explore-img-info">
 										<button onclick="window.location.href='#'">best rated</button>
 										<div class="single-explore-image-icon-box">
@@ -108,13 +108,13 @@
 									</div>
 								</div>
 								<div class="single-explore-txt bg-theme-1">
-									<h2><a href="#">{{$place->title}}</a></h2>
+									<h2><a href="#">{{$Place->title}}</a></h2>
 									<p class="explore-rating-price">
 										<span class="explore-rating">5.0</span>
 										<a href="#"> 10 ratings</a> 
 										<span class="explore-price-box">
 											form
-											<span class="explore-price">{{$place->startPrice}}$-{{$place->endPrice}}$</span>
+											<span class="explore-price">{{$Place->startPrice}}$-{{$Place->endPrice}}$</span>
 										</span>
 										 <a href="#">resturent</a>
 									</p>
@@ -129,7 +129,7 @@
 											</div>
 											<div class="col-sm-10">
 												<p>
-													{{$place->description}}	
+													{{$Place->description}}	
 												</p>
 											</div>
 										</div>
@@ -503,7 +503,7 @@
 		<!--subscription end -->
 
         @include('includes.footer')
-		@include('includes.footerJS')
+		//@include('includes.footerJS')
 
     </body>
 	
